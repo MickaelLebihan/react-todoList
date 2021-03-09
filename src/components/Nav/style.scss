@@ -1,0 +1,12 @@
+h1 {
+  font-size: 72px;
+  //width: 150px;
+  display: inline-block;
+  border: 1px solid #000;
+  background: #FF01EE;
+  background: -webkit-linear-gradient(top right, #FF01EE, #01C1B8);
+  background: -moz-linear-gradient(top right, #FF01EE, #01C1B8);
+  background: linear-gradient(to left, #FF01EE, #01C1B8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

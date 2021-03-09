@@ -1,0 +1,43 @@
+$borderColor: #0099ff;
+
+.addItem{
+  margin-bottom: 5px;
+  display: flex;
+
+  input{
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    border: 1px solid $borderColor;
+    width: 100%;
+    padding-left: 10px;
+  }
+  button{
+    position: relative;
+
+    $buttonPadding: 1px;
+    padding-top: $buttonPadding;
+    padding-bottom: $buttonPadding;
+    font-weight: bold;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    border-radius: 0 5px 5px 0;
+    border: 1px solid $borderColor;
+    border-width: 1px 1px 1px 0;
+    background-color: #0099ff;
+    color: #fff;
+    span {
+      position: absolute;
+      transition: transform 1s ease;
+    }
+    &:hover{
+      span{
+        font-weight: bold;
+        transform: rotate3d(0,0,1,360deg);
+      }
+      //font-size: 1.1em;
+    }
+  }
+}

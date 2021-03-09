@@ -1,0 +1,65 @@
+.levelContainer{
+  margin-top: 20px;
+  height: 5px;
+  position: relative;
+  background-color: #d7d7d7;
+
+  &:before{
+    content:"0";
+    font-size: 0.6em;
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+  &:after{
+    content:"100";
+    font-size: 0.6em;
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+  span{
+    position: absolute;
+    top: -15px;
+    right: 0;
+  }
+  .progressBar{
+    position: relative;
+    height: 5px;
+    background-color: #0099ff;
+
+    transition: all 1s ease;
+    //.cursor{
+    //  //width: 1px;
+    //  height: 5px;
+    //  border-right: 1px solid black;
+    //  //background-color: black;
+    //  position: absolute;
+    //  right: 0;
+    //  text-align: left;
+    //  font-size: 0.7em;
+    //}
+    &.full{
+      background-color: #1b6d00;
+    }
+  }
+}
+.levelBar{
+  display: block;
+  height: 5px;
+  background-color: #0099ff;
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+
+  &.level{
+    &:after{
+      content:"|";
+      font-size: 0.6em;
+      position: absolute;
+      top: 5px;
+      right: 0;
+    }
+  }
+}
