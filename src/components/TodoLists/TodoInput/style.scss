@@ -1,15 +1,16 @@
-$borderColor: #0099ff;
+@use 'src/components/vars/colors';
+@use 'src/components/vars/radiuses';
 
 .addItem{
-  margin-bottom: 5px;
+  margin-top: 10px;
   display: flex;
 
   input{
-    border-radius: 5px 0 0 5px;
+    border-radius: radiuses.$radius 0 0 radiuses.$radius;
     outline: none;
-    border: 1px solid $borderColor;
+    border: 1px solid colors.$secondaryColors;
     width: 100%;
-    padding-left: 10px;
+    padding-left: 5px;
   }
   button{
     position: relative;
@@ -23,14 +24,17 @@ $borderColor: #0099ff;
     justify-content: center;
     align-content: center;
 
-    border-radius: 0 5px 5px 0;
-    border: 1px solid $borderColor;
+    outline: none;
+
+    border-radius: 0 radiuses.$radius radiuses.$radius 0;
+    border: 1px solid colors.$secondaryColors;
     border-width: 1px 1px 1px 0;
-    background-color: #0099ff;
+    background-color: colors.$secondaryColors;
     color: #fff;
     span {
       position: absolute;
       transition: transform 1s ease;
+      pointer-events: none;
     }
     &:hover{
       span{

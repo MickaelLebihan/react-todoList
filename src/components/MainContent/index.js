@@ -1,7 +1,7 @@
 import React from 'react';
 import todosLists from "../data";
-import Todos from "../TodoItems";
-import NewTodoList from "../NewTodoList";
+import Todos from "../TodoLists";
+import NewTodoList from "../TodoLists/NewTodoList";
 
 class MainContent extends React.Component {
     constructor(props) {
@@ -16,6 +16,8 @@ class MainContent extends React.Component {
     newTodo(e){
         var input = document.getElementById("newTodoListName");
         // console.log(input.value);
+
+        if (input.value.length === 0) {return}
 
         var todoListName = input.value;
 

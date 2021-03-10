@@ -9,7 +9,7 @@ function TodoItem(props) {
 
     return (
         <>
-            <div id={id} className="todoItem" onClick={props.update}>
+            <div id={id} className="todoItem" onClick={props.check}>
                 <input type='checkbox' readOnly checked={checked}/>
                 <label htmlFor={name}>{name}</label>
             </div>

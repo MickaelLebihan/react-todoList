@@ -1,21 +1,24 @@
+@use 'src/components/vars/colors';
+
 .levelContainer{
-  margin-top: 20px;
+  margin: 15px 0;
   height: 5px;
   position: relative;
   background-color: #d7d7d7;
 
-  &:before{
-    content:"0";
+  &:before, &:after{
     font-size: 0.6em;
     position: absolute;
     top: 5px;
+    color: white;
+  }
+
+  &:before{
+    content:"0";
     left: 0;
   }
   &:after{
     content:"100";
-    font-size: 0.6em;
-    position: absolute;
-    top: 5px;
     right: 0;
   }
   span{
@@ -26,7 +29,7 @@
   .progressBar{
     position: relative;
     height: 5px;
-    background-color: #0099ff;
+    background-color: colors.$secondaryColors;
 
     transition: all 1s ease;
     //.cursor{
@@ -47,7 +50,7 @@
 .levelBar{
   display: block;
   height: 5px;
-  background-color: #0099ff;
+  background-color: colors.$mainColor;
   position: absolute;
   top: 0;
   width: 0%;

@@ -1,0 +1,69 @@
+@use 'src/components/vars/colors';
+@use 'src/components/vars/fonts';
+
+
+.todos{
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-start;
+
+}
+
+.todo{
+  position: relative;
+  margin: 0;
+  margin-right: 10px;
+  padding: 0 10px;
+  //padding-bottom: 20px;
+  border: 1px solid #fff;
+  background-color: colors.$mainColor;
+  display: block;
+  width: 200px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  align-self: flex-start;
+
+
+  h2{
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 1px 1px 0 black;
+    font-family: 'Quicksand', sans-serif;
+    &:first-letter{
+      text-transform: capitalize;
+    }
+    &:after{
+      //content: " /Fait !";
+      color: green;
+    }
+  }
+
+  .completeness{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: darken(colors.$mainColor,10);
+  }
+
+  &:hover{
+    //border-color: black;
+  }
+}
+
+.todoItems{
+  margin: 5px 0 0 0;
+  padding: 0 0;
+
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: flex-start;
+  //align-items: flex-start;
+
+}
