@@ -1,10 +1,15 @@
 import React from 'react';
 import './style.scss';
 
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faClipboardList} from "@fortawesome/free-solid-svg-icons/faClipboardList";
+
 function Nav(){
     return (
         <header>
-            <h1>page name</h1>
+            <div className="logo">
+                <FontAwesomeIcon icon={faClipboardList}/><h1>todos</h1>
+            </div>
 
             <nav>
                 <ul>

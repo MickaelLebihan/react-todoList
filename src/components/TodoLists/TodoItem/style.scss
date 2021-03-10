@@ -11,6 +11,12 @@
   margin-bottom: 2px;
   width: 100%;
   //display: inline-block;
+  span{
+    position: absolute;
+    left: 2px;
+    color: white;
+    font-size: 0.7em;
+  }
   & input{
     position: absolute;
     //top: 0;

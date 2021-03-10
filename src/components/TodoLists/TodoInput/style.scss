@@ -1,5 +1,6 @@
 @use 'src/components/vars/colors';
 @use 'src/components/vars/radiuses';
+@use 'src/components/vars/themes';
 
 .addItem{
   margin-top: 10px;
@@ -31,14 +32,15 @@
     border-width: 1px 1px 1px 0;
     background-color: colors.$secondaryColors;
     color: #fff;
-    span {
+    svg {
       position: absolute;
       transition: transform 1s ease;
       pointer-events: none;
+      top: 2px;
+      //border: 1px solid #000;
     }
     &:hover{
-      span{
-        font-weight: bold;
+      svg{
         transform: rotate3d(0,0,1,360deg);
       }
       //font-size: 1.1em;

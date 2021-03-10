@@ -1,0 +1,52 @@
+@use 'src/components/vars/colors';
+
+.blueTheme{
+  .addItem{
+    input{
+      border: 1px solid colors.$blenderSecondaryColors;
+    }
+    button{
+      border: 1px solid colors.$blenderSecondaryColors;
+      background-color: colors.$blenderSecondaryColors;
+    }
+  }
+  .todoItem{
+    & label{
+      color: adjust-color(colors.$blenderMainColor,$lightness: -20);
+      background-color: adjust-color(colors.$blenderMainColor,$lightness: 20);
+
+    }
+    &:hover{
+      & input, label{
+        background-color: adjust-color(colors.$blenderSecondaryColors,$lightness:-5);
+      }
+    }
+    &.checked{
+      & label{
+        color: darken(colors.$blenderMainColor,20);
+        background-color: darken(colors.$blenderMainColor,10);
+      }
+    }
+  }
+}
+
+.forestTheme{
+  .todoItem{
+    & label{
+      color: adjust-color(colors.$forestMainColor,$lightness: -20);
+      background-color: adjust-color(colors.$forestMainColor,$lightness: 20);
+
+    }
+    &:hover{
+      & input, label{
+        background-color: adjust-color(colors.$forestSecondaryColors,$lightness:-5);
+      }
+    }
+    &.checked{
+      & label{
+        color: darken(colors.$forestMainColor,20);
+        background-color: darken(colors.$forestMainColor,10);
+      }
+    }
+  }
+}
