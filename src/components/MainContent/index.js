@@ -3,6 +3,8 @@ import todosLists from "../data";
 import Todos from "../TodoLists";
 import NewTodoList from "../TodoLists/NewTodoList";
 
+import ThemeSelector from "../themes";
+
 class MainContent extends React.Component {
     constructor(props) {
         super(props);
@@ -13,18 +15,29 @@ class MainContent extends React.Component {
         this.newTodo = this.newTodo.bind(this);
     }
 
-    newTodo(e){
-        var input = document.getElementById("newTodoListName");
-        // console.log(input.value);
+    newTodo(e) {
+        var inputElement = document.getElementById("newTodoListName");
+        var listElement = document.getElementById("newTodolistOfItems");
 
-        if (input.value.length === 0) {return}
 
-        var todoListName = input.value;
+        let list;
+        if (listElement && listElement.value.length > 0) {
+            list = listElement.value.split(",");
+            list = list.filter((item) => item.trim().length > 0)
+            listElement.value = "";
+        } else {
+            list = [];
+        }
+        console.log(list);
+
+        if (inputElement.value.length === 0) {return}
+
+        var todoListName = inputElement.value;
 
         var todoList = {
             id: this.state.todosLists.length +1,
             title: todoListName,
-            list : []
+            list : list,
         }
 
 
@@ -34,13 +47,15 @@ class MainContent extends React.Component {
         this.setState({
             todosLists
         })
-        input.value = "";
+        inputElement.value = "";
+
     }
 
     render() {
         // console.log(this.state.todosLists);
         return (
             <main>
+                <ThemeSelector />
                 <NewTodoList newTodo={this.newTodo}/>
                 <div className="todos">
                     {

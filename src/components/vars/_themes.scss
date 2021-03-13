@@ -1,6 +1,48 @@
 @use 'src/components/vars/colors';
 
+//.default{
+  .todo .default{
+    background-color: colors.$mainColor;
+    .completeness {
+      color: lighten(colors.$mainColor,20);
+    }
+  }
+      .addItem .default{
+    input{
+      border: 1px solid colors.$secondaryColors;
+    }
+    button{
+      border: 1px solid colors.$secondaryColors;
+      background-color: colors.$secondaryColors;
+    }
+  }
+  .todoItem{
+    & label{
+      color: adjust-color(colors.$mainColor,$lightness: -20);
+      background-color: adjust-color(colors.$mainColor,$lightness: 20);
+
+    }
+    &:hover{
+      & input, label{
+        background-color: adjust-color(colors.$secondaryColors,$lightness:-5);
+      }
+    }
+    &.checked{
+      & label{
+        color: darken(colors.$mainColor,20);
+        background-color: darken(colors.$mainColor,10);
+      }
+    }
+  }
+//}
+
 .blueTheme{
+  .todo .blueTheme{
+    background-color: colors.$blenderMainColor;
+    .completeness .blueTheme{
+      color: lighten(colors.$blenderMainColor,20);
+    }
+  }
   .addItem{
     input{
       border: 1px solid colors.$blenderSecondaryColors;

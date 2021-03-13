@@ -2,27 +2,12 @@ import React from 'react';
 import './style.scss';
 
 class ProgressBar extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            list : props.data.list,
-            completed : props.data.completed,
-        }
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props !== prevProps) {
-
-            this.setState({
-                list: this.props.data.list,
-                completed: this.props.data.completed
-            })
-        }
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     getPercent(){
-        return Math.ceil((this.state.completed * 100) / this.state.list.length);
+        return Math.ceil((this.props.completed * 100) / this.props.list.length);
     }
 
     render() {
